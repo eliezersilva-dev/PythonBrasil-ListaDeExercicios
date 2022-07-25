@@ -11,34 +11,36 @@ misturar latas e galões, de forma que o desperdício de tinta seja menor. Acres
 valores para cima, isto é, considere latas cheias.
 """
 
+# Exercício não finalizado. Não encontrei solução em Estrutura Sequencial que atendesse as necessidades do problema;
+# Segue solução proposta, no entanto há várias falhas;
+# Se você encontrar outra solução, por favor deixe um pull request. Muito Obrigado! Eliezer Silva.
+
 largura = float(input('Digite a largura da área a ser pintada: '))
 comprimento = float(input('Digite o comprimento da área a ser pintada: '))
 area = float(largura * comprimento)
-litros = area / 6
+print(f'A área a ser pintada é de {area} m²')
+litros = round(area / 6) * 1.1
 
-latas = int(litros / 18)
-if not latas % 18 == 0.0:
+latas = round(litros / 18)
+if latas % 18 == 0:
     latas += 1
 preco_latas = latas * 80
 
-galoes = litros / 3.6
-if galoes % 3.6 != 0:
+galoes = round(litros / 3.6)
+if galoes % 3.6 == 0:
     galoes += 1
 preco_galao = galoes * 25
 
+mistura_latas = round(litros / 18)
+mistura_galao = round((litros - latas * 18) / 3.6)
+
+if litros - (mistura_latas * 18) % 3.6 == 0:
+    mistura_galao += 1
+
+preco_mistura = (mistura_latas * 80) + (mistura_galao * 25)
+
+print('Quantidade a ser usada:')
 print(f'Apenas latas de 18 litros: {latas} lata(s) R$ {preco_latas:.2f} .')
 print(f'Apenas galões de 3.6 litros: {galoes} galao(oes) R$ {preco_galao:.2f} .')
+print(f'Misturando latas e galões: {latas} lata(s) {mistura_galao} galão(ões) R$ {preco_mistura:.2f}')
 
-
-
-
-# mistura_lata = int(litros / 18.0)
-# mistura_galao = int((litros - (mistura_lata * 18)) / 3.6)
-#
-# if litros - (mistura_lata * 18) % 3.6 != 0:
-#     mistura_galao += 1
-#
-# p
-#
-# print('Mistura: %d latas e %d galoes = %.2f' % (
-#     mistura_lata, mistura_galao, ((mistura_lata * 80) + (mistura_galao * 25))))
