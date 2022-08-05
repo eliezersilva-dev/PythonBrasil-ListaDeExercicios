@@ -4,7 +4,9 @@ Exercício 17
 
 Faça um Programa que peça um número correspondente a um determinado ano e
 em seguida informe se este ano é ou não bissexto.
+----------------------------------------------
 
+Loógica do problema:
 Para determinar se um ano é bissexto, execute estas etapas:
 1- Se o ano for uniformemente divisível por 4, vá para a etapa 2. Caso contrário, vá para a etapa 5.
 2- Se o ano for uniformemente divisível por 100, vá para a etapa 3. Caso contrário, vá para a etapa 4.
