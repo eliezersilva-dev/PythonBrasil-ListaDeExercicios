@@ -6,17 +6,17 @@ Faça um programa que peça um número inteiro e determine se ele é ou não um 
 Um número primo é aquele que é divisível somente por ele mesmo e por 1.
 """
 
-numero = 9
+numero = int(input('Digite um número: '))
 
-lista = list(range(2, numero + 1, 1))
-print(lista)
+if numero > 1:
 
-lista_primos = []
+    for i in range(2, numero, 1):
 
-for i in lista:
-    if numero / i == 1 and numero % i == 0:
-        lista_primos.append(i)
+        if numero % i == 0:
+            print(f'O número {numero} não é primo')
+            break
+    else:
+        print(f'O número {numero} é primo')
 
-print(lista_primos)
-
-
+else:
+    print(f'O número {numero} é primo...')
