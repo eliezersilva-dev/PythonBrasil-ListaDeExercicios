@@ -6,17 +6,12 @@ Faça um programa que peça um número inteiro e determine se ele é ou não um 
 Um número primo é aquele que é divisível somente por ele mesmo e por 1.
 """
 
-numero = int(input('Digite um número: '))
-
-if numero > 1:
-
-    for i in range(2, numero, 1):
-
-        if numero % i == 0:
-            print(f'O número {numero} não é primo')
-            break
-    else:
-        print(f'O número {numero} é primo')
-
-else:
-    print(f'O número {numero} é primo...')
+numero = int(input("Digite um numero inteiro: "))
+primo = True
+for i in range(2, numero):
+    if numero % i == 0:
+        primo = False
+        print(f"{numero} não é primo!")
+        break
+if primo:
+    print(f"{numero} é primo!")
