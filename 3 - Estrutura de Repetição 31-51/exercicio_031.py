@@ -25,34 +25,53 @@ print()
 produtos = {}
 cont = 1
 total = 0
+dinheiro = 0
+troco = 0
 
 
-def funcao():
+def notinha():
+    print()
+    print('Lojas Tabajara')
 
+    for i, j in produtos.items():
+        print(f'{i}: R$ {j:.2f}')
+
+    print(f'Total: R$ {total:.2f}\n'
+          f'Dinheiro: R$ {dinheiro:.2f}\n'
+          f'Troco: R$ {troco:.2f}')
+
+
+def pagamento():
+    global dinheiro
+    global troco
+    dinheiro = float(input('Qual o valor em dinheiro: R$ '))
+    troco = dinheiro - total
+    if dinheiro < total:
+        print('Dinheiro insuficiente.')
+        pagamento()
+    else:
+        notinha()
+
+
+def inserir_produto():
     global produtos
     global cont
     global total
     key = f'Produto {cont}'
-    value = float(input('Valor produto: '))
+    value = float(input(f'Valor produto {cont}: '))
     cont += 1
 
     if value == 0:
-
-        for i, j in produtos.items():
-            print()
-            print('Lojas Tabajara')
-            print(f'{i}: R$ {j:.2f}')
-
         total = sum(produtos.values())
-        print('Total: {total}')
-        quit()
+        print(f'Total: R$ {total:.2f}')
+        pagamento()
 
     else:
         produtos.update({key: value})
-        funcao()
+        inserir_produto()
 
 
-funcao()
+inserir_produto()
 
 
 
