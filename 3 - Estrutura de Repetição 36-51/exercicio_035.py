@@ -15,3 +15,4 @@ for i in range(1, numero + 1):
         lista.append(i)
 
 print('Números primos: ', lista)
+
