@@ -18,7 +18,7 @@ while cont < 11:
     alunos.update({f'aluno {cont}': int(input(f'Digite a altura do Aluno {cont} em centímetros: '))})
     cont += 1
 
-print(alunos)
+print()
 print(f'Aluno mais alto: {max(alunos, key= alunos.get)} com {max(alunos.values())} cm')  # imprimi maior key e maior value
-print(f'Aluno mais baixo: {min(alunos, key=alunos.get)} com {min(alunos.values())} cm')  # imprimi menor key e menor value
+print(f'Aluno mais baixo: {min(alunos, key= alunos.get)} com {min(alunos.values())} cm')  # imprimi menor key e menor value
 print(f'A média da altura dos alunos é de {sum(alunos.values()) / len(alunos)}cm')  # soma values divide pelo len
