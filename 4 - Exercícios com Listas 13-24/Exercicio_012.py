@@ -15,7 +15,7 @@ print()
 alunos = {}
 contagem_alunos = 1
 for i in range(0, 30):
-    alunos[f'Aluno_{contagem_alunos}'] = int(random.randint(1, 18)), random.uniform(1, 3)
+    alunos[f'Aluno_{contagem_alunos}'] = int(random.randint(1, 18)), round(random.uniform(1, 3), 2)
     contagem_alunos += 1
 
 
@@ -45,9 +45,4 @@ print(f'A média de altura dos alunos é de {media_altura:.2f} m')
 print()
 print(f'O(s) aluno(s) com idade maior que 13 anos e altura abaixo da média é(são):\n'
       f'{alunos_selecionados}')
-
-
-
-
-
 
