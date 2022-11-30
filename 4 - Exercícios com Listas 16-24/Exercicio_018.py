@@ -62,19 +62,48 @@ contagem_votos = 0
 
 
 def resultado():
-    print(votos)
+    pontos = {}
+    maior_ponto = []
+
+    for i, j in votos.items():
+        if j != 0:
+            pontos.update({i: j})
+
+    print()
+    print('------- RESULTADO -------')
+    print('|Jogador | Votos | %')
+    for k, l in pontos.items():
+        print(f'|   {k}    |   {l}   | {(l*100)/contagem_votos:.2f}%')
+
+    for m, n in pontos.items():
+        if n == max(pontos.values()):
+            maior_ponto = [m, n]
+
+    print()
+    print(f'O melhor jogador foi o número {maior_ponto[0]}, com {maior_ponto[1]} votos\n'
+          f'correspondendo a {(maior_ponto[1]*100)/contagem_votos:.2f}% do total de votos.')
 
 
 def votar():
+    global contagem_votos
     voto = input('Número do jogador (0=fim): ')
-    if voto == '0':
-        resultado()
-    else:
-        votos[voto] += 1
+
+    if not voto.isnumeric():
+        print('Insira um valor válido.')
         votar()
-
-
-
+    else:
+        voto = int(voto)
+        if voto < 0 or voto > 23:
+            print('Informe um valor entre 1 e 23 ou 0 para sair!')
+            votar()
+        else:
+            voto = str(voto)
+            if voto == '0':
+                resultado()
+            else:
+                votos[voto] += 1
+                contagem_votos += 1
+                votar()
 
 
 votar()
