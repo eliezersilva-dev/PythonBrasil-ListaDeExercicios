@@ -21,7 +21,7 @@ Após os dados terem sido completamente informados, o programa deverá calcular 
 cada um dos concorrentes e informar o vencedor da enquete. O formato da saída foi dado pela
 empresa, e é o seguinte:
 
-Sistema Operacional     Votos   %
+Sistema Operacional     Votos    %
 -------------------     -----   ---
 Windows Server           1500   17%
 Unix                     3500   40%
