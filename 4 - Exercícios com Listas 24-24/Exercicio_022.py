@@ -58,11 +58,11 @@ def finalizar():
     print()
     print(f'Quantidade de mouses: {len(mouses_defeitos)}')
     print('Situação - Quantidade - Percentual')
-    print(f'1 - Necessita de esfera {necessita_esfera} {(necessita_esfera*100)/len(mouses_defeitos):.2f}%')
-    print(f'2 - Necessita de limpeza {necessita_limpeza} {(necessita_limpeza*100)/len(mouses_defeitos):.2f}%')
-    print(f'3 - Necessita troca do cabo ou conector {necessita_troca_cabo_conector}'
-          f' {(necessita_troca_cabo_conector*100)/len(mouses_defeitos):.2f}%')
-    print(f'4 - Quebrado ou inutilizado {quebrado_inutilizado} {(quebrado_inutilizado*100)/len(mouses_defeitos):.2f}%')
+    print(f'1- Necessita de esfera - {necessita_esfera} - {(necessita_esfera*100)/len(mouses_defeitos):.2f}%')
+    print(f'2- Necessita de limpeza - {necessita_limpeza} - {(necessita_limpeza*100)/len(mouses_defeitos):.2f}%')
+    print(f'3- Necessita troca do cabo ou conector - {necessita_troca_cabo_conector}'
+          f' - {(necessita_troca_cabo_conector*100)/len(mouses_defeitos):.2f}%')
+    print(f'4- Quebrado ou inutilizado - {quebrado_inutilizado} - {(quebrado_inutilizado*100)/len(mouses_defeitos):.2f}%')
 
 
 def inserir_defeitos():
