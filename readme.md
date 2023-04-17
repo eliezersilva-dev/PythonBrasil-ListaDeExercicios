@@ -12,20 +12,20 @@ divididos em categorias e procuram obedecer uma ordem de dificuldade crescente s
 
 ✔ Lista de exercícios:
 
-- EstruturaSequencial
+- [EstruturaSequencial](https://github.com/eliezersilva-dev/PythonBrasil-ListaDeExercicios/tree/master/1%20-%20Estrutura%20Sequencial%2018-18)
 
-- EstruturaDeDecisao
+- [EstruturaDeDecisao](https://github.com/eliezersilva-dev/PythonBrasil-ListaDeExercicios/tree/master/2%20-%20Estrutura%20De%20Decisao%2028-28)
 
-- EstruturaDeRepeticao
+- [EstruturaDeRepeticao](https://github.com/eliezersilva-dev/PythonBrasil-ListaDeExercicios/tree/master/3%20-%20Estrutura%20de%20Repeti%C3%A7%C3%A3o%2051-51)
 
-- ExerciciosListas
+- [ExerciciosListas](https://github.com/eliezersilva-dev/PythonBrasil-ListaDeExercicios/tree/master/4%20-%20Exerc%C3%ADcios%20com%20Listas%2024-24)
 
-- ExerciciosFuncoes
+- [ExerciciosFuncoes](https://github.com/eliezersilva-dev/PythonBrasil-ListaDeExercicios/tree/master/5%20-%20Exerc%C3%ADcios%20Fun%C3%A7%C3%B5es%2014-14)
 
-- ExerciciosComStrings
+- [ExerciciosComStrings](https://github.com/eliezersilva-dev/PythonBrasil-ListaDeExercicios/tree/master/6%20-%20Exerc%C3%ADcios%20com%20Strings%2012-14)
 
-- ExerciciosArquivos
+- ExerciciosArquivos - Em breve
 
-- ExerciciosClasses
+- ExerciciosClasses - Em breve
 
-- ListaDeExerciciosProjetos
+- ListaDeExerciciosProjetos - Em breve
