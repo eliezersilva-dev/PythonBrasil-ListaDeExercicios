@@ -26,6 +26,6 @@ divididos em categorias e procuram obedecer uma ordem de dificuldade crescente s
 
 - [ExerciciosArquivos](https://github.com/eliezersilva-dev/PythonBrasil-ListaDeExercicios/tree/master/7%20-%20Exerc%C3%ADcios%20com%20Arquivos%2002-02)
 
-- ExerciciosClasses - Em breve
+- [ExerciciosClasses](https://github.com/eliezersilva-dev/PythonBrasil-ListaDeExercicios/tree/master/8%20-%20Exerc%C3%ADcios%20com%20Classes%2001-17)
 
 - ListaDeExerciciosProjetos - Em breve

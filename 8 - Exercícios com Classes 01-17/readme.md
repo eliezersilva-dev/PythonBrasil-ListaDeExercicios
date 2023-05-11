@@ -23,8 +23,9 @@ Depois, deve criar um objeto com as medidas e calcular a quantidade de pisos e d
 - Métodos: Envelhercer, engordar, emagrecer, crescer. Obs: Por padrão, a cada ano que nossa pessoa envelhece, sendo a 
 idade dela menor que 21 anos, ela deve crescer 0,5 cm.
 
-5- Classe Conta Corrente: Crie uma classe para implementar uma conta corrente. A classe deve possuir os seguintes 
-atributos: 
+5- Classe Conta Corrente: Crie uma classe para implementar uma conta corrente. 
+
+A classe deve possuir os seguintes atributos: 
 - número da conta, nome do correntista e saldo.
 
 Os métodos são os seguintes: 
