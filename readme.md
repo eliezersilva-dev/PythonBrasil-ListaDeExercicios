@@ -24,7 +24,7 @@ divididos em categorias e procuram obedecer uma ordem de dificuldade crescente s
 
 - [ExerciciosComStrings](https://github.com/eliezersilva-dev/PythonBrasil-ListaDeExercicios/tree/master/6%20-%20Exerc%C3%ADcios%20com%20Strings%2012-14)
 
-- ExerciciosArquivos - Em breve
+- [ExerciciosArquivos](https://github.com/eliezersilva-dev/PythonBrasil-ListaDeExercicios/tree/master/7%20-%20Exerc%C3%ADcios%20com%20Arquivos%2002-02)
 
 - ExerciciosClasses - Em breve
 
