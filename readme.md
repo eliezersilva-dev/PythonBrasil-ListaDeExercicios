@@ -22,7 +22,7 @@ divididos em categorias e procuram obedecer uma ordem de dificuldade crescente s
 
 - [ExerciciosFuncoes](https://github.com/eliezersilva-dev/PythonBrasil-ListaDeExercicios/tree/master/5%20-%20Exerc%C3%ADcios%20Fun%C3%A7%C3%B5es%2014-14)
 
-- [ExerciciosComStrings](https://github.com/eliezersilva-dev/PythonBrasil-ListaDeExercicios/tree/master/6%20-%20Exerc%C3%ADcios%20com%20Strings%2012-14)
+- [ExerciciosComStrings](https://github.com/eliezersilva-dev/PythonBrasil-ListaDeExercicios/tree/master/6%20-%20Exerc%C3%ADcios%20com%20Strings%2014-14)
 
 - [ExerciciosArquivos](https://github.com/eliezersilva-dev/PythonBrasil-ListaDeExercicios/tree/master/7%20-%20Exerc%C3%ADcios%20com%20Arquivos%2002-02)
 
