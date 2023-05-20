@@ -59,7 +59,7 @@ def encontrar_posicao(retangulo, ponto):
           f'Posição ponto: x{x:.2f}, y{y:.2f}')
 
 
-# estância dos objetos
+# objetos
 retangulo1 = Retangulo(6, 8)
 retangulo1.mostrar_retangulo()
 
