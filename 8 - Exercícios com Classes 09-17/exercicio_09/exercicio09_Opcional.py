@@ -6,17 +6,59 @@ Exercício resolvido com outras funcionalidades.
 Obs: Nesse exercício utilizei as classes criadas no exercício 09 e criei o menu onde o usuário poderá
 criar os objetos que serão exibidos em um interface gráfica simples (turtle).
 """
+# Bibliotecas usadas no exercício
+import turtle
+import time
+
+
+# Parei aqui: a função 'apresentar_retangulo' não renderiza a janela turtle
+# a função é chamada, printa antes e depois da sequência de comandos turtle
+# mas o turtle não renderiza. Fora da função o bloco turtle funciona. Por que?
+# Por que? Por que? Por que? Por que? Por que? Por que? Por que? Por que? Por que?
+# Perdi umas duas horas tentando resolver essa porcaria. Desisto. Vou dormir...
 
 
 # Esta função irá apresentar ao usuário o resultado em uma interface gráfica simples.
-def apresentacao(funcao):
-    funcao = funcao
-    if funcao == 'mostrar_retangulo':
-        print('\n AQUI -> Apresentação GRAFICA de "mostrar_retangulo"')
-    elif funcao == 'encontrar_centro':
-        print('\n AQUI -> Apresentação GRAFICA de mostrar_centro')
-    elif funcao == 'encontrar_posicao':
-        print('\n AQUI -> Apresentação GRAFICA de mostrar_ponto')
+def apresentar_retangulo():
+    print('OK chamou a função')
+    caneta = turtle.Turtle()
+    caneta.speed(1)
+    caneta.shape('circle')
+    caneta.hideturtle()
+    caneta.pensize(5)
+    caneta.penup()
+    caneta.goto(-250, -250)
+
+    x = 100
+    y = 50
+
+    caneta.pendown()
+    caneta.forward(x)
+    caneta.left(90)
+    caneta.forward(y)
+    caneta.left(90)
+    caneta.forward(x)
+    caneta.left(90)
+    caneta.forward(y)
+    caneta.left(90)
+
+    caneta2 = turtle.Turtle()
+    caneta2.pencolor('red')
+    caneta2.left(90)
+    caneta2.forward(50)
+
+    time.sleep(3)
+    turtle.bye()
+
+    print('\nAQUI -> Apresentação GRAFICA de "mostrar_retangulo"')
+
+    menu()
+
+
+# elif _funcao == 'encontrar_centro':
+#     print('\nAQUI -> Apresentação GRAFICA de mostrar_centro')
+# elif _funcao == 'encontrar_posicao':
+#     print('\nAQUI -> Apresentação GRAFICA de mostrar_ponto')
 
 
 # Criando a Classe Retângulo
@@ -29,8 +71,7 @@ class Retangulo:
         print(f'\nMostrar Retângulo:\n'
               f'Largura: {self.largura}\n'
               f'Altura: {self.altura}')
-        apresentacao('mostrar_retangulo')  # Aqui chama a função de apresentação da interface gráfica
-        menu()
+        apresentar_retangulo()  # Aqui chama a função de apresentação da interface gráfica
 
 
 # Criando a Classe Ponto
@@ -83,11 +124,13 @@ def criar_retangulo():
     global retangulo
 
     print('\nCrie ou edite um retângulo:\n'
-          'Informe a Largura e a Altura.')
+          'Informe a Largura e a Altura (valor máximo = 500).')
 
     largura = input('Largura: ')
     if largura.isdigit():
         largura = float(largura)
+        if largura > 500:  # Limitado a 500 para melhor apresentação na intarface gráfica
+            largura = 500
     else:
         print('>>> Informe um valor numérico maior que zero.')
         print()
@@ -96,6 +139,8 @@ def criar_retangulo():
     altura = input('Altura: ')
     if altura.isdigit():
         altura = float(altura)
+        if altura > 500:
+            altura = 500  # Limitado a 500 para melhor apresentação na intarface gráfica
     else:
         print('>>> Informe um valor numérico maior que zero.')
         print()
@@ -110,7 +155,7 @@ def criar_ponto():
     global ponto
 
     print('\nCrie ou edite um Ponto:\n'
-          'Informe a posição x e a posição y.')
+          'Informe a posição x e a posição y (valor máximo = 500).')
 
     x = input('Posição x: ')
     try:
@@ -118,6 +163,8 @@ def criar_ponto():
         if x < 0:
             print('\n>>> Informe um valor numérico maior que zero.')
             menu()
+        elif x > 500:
+            x = 500
     except ValueError as erro:
         print('\n>>> Informe um valor numérico maior que zero.')
         menu()
@@ -128,6 +175,8 @@ def criar_ponto():
         if y < 0:
             print('\n>>> Informe um valor numérico maior que zero.')
             menu()
+        elif y > 500:
+            y = 500
     except ValueError as erro:
         print('\n>>> Informe um valor numérico maior que zero.')
         menu()
