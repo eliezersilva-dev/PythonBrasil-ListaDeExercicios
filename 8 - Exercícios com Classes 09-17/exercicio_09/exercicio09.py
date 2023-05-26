@@ -16,8 +16,10 @@ de x e y para o centro do objeto.
 h. O valor do centro do objeto deve ser mostrado na tela.
 i. Crie um menu para alterar os valores do retângulo e imprimir o centro deste retângulo.
 """
+print()
 
 
+# Criando a Classe Retângulo
 class Retangulo:
     def __init__(self, largura, altura):
         self.largura = largura
@@ -29,6 +31,7 @@ class Retangulo:
                      f'Altura: {self.altura}')
 
 
+# Criando a Classe Ponto
 class Ponto:
     def __init__(self, ponto_x, ponto_y):
         self.ponto_x = ponto_x
@@ -40,6 +43,7 @@ class Ponto:
                      f'Ponto Y posição: {self.ponto_y}')
 
 
+# Função para exibir o centro do retângulo
 def encontrar_centro(retangulo):
     largura = retangulo.largura
     altura = retangulo.altura
@@ -48,6 +52,7 @@ def encontrar_centro(retangulo):
     print(f'\nPosição centro: x{x}, y{y}')
 
 
+# Função para exibir a posição do ponto no retângulo
 def encontrar_posicao(retangulo, ponto):
     largura = retangulo.largura
     altura = retangulo.altura
@@ -59,7 +64,7 @@ def encontrar_posicao(retangulo, ponto):
           f'Posição ponto: x{x:.2f}, y{y:.2f}')
 
 
-# objetos
+# Instânciando objetos e chamando funções
 retangulo1 = Retangulo(6, 8)
 retangulo1.mostrar_retangulo()
 
@@ -70,4 +75,5 @@ encontrar_centro(retangulo1)
 
 retangulo2 = Retangulo(10, 10)
 ponto2 = Ponto(3, 7)
+
 encontrar_posicao(retangulo2, ponto2)
