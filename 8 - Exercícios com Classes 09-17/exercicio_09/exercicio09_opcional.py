@@ -3,8 +3,11 @@ Eliezer Silva
 Exercício 09 - Opcional
 -----------------------
 Exercício resolvido com outras funcionalidades.
-Obs: Nesse exercício utilizei as classes criadas no exercício 09 e criei o menu onde o usuário poderá
-criar os objetos que serão exibidos em um interface gráfica simples (turtle).
+Obs: Nesse exercício utilizei as classes criadas no exercício 09 e implementei o menu onde o usuário poderá
+criar os objetos que serão exibidos em uma interface gráfica simples (turtle).
+
+Para melhor visualização da aplicação execute o código, divida a tela e utlize a janela do Turtle que se abrirá junto
+à janela da IDE (visualize as duas interfaces, turtle e IDE, com a tela dividida ou dois monitores).
 """
 # Bibliotecas usadas no exercício
 import turtle
