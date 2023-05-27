@@ -25,56 +25,63 @@ OBS: Sempre que acontecer um abastecimento é necessário atualizar a quantidade
 # area de testes - apagar
 
 
-import turtle
-import time
+# import turtle
+# import time
 
-turtle.Screen()
-caneta = turtle.Turtle()
-caneta.speed(1)
-caneta.shape('circle')
-caneta.hideturtle()
-caneta.pensize(5)
-caneta.penup()
-caneta.goto(-250, -250)
-
-
-x = 100
-y = 50
-caneta.pendown()
-caneta.forward(x)
-caneta.left(90)
-caneta.forward(y)
-caneta.left(90)
-caneta.forward(x)
-caneta.left(90)
-caneta.forward(y)
-caneta.left(90)
-
-caneta2 = turtle.Turtle()
-caneta2.pencolor('red')
-caneta2.left(90)
-caneta2.forward(50)
-
-
-time.sleep(3)
-turtle.bye()
+# turtle.Screen()
+# caneta = turtle.Turtle()
+# caneta.speed(1)
+# caneta.shape('circle')
+# caneta.hideturtle()
+# caneta.pensize(5)
+# caneta.penup()
+# caneta.goto(-250, -250)
+#
+#
+# x = 100
+# y = 50
+# caneta.pendown()
+# caneta.forward(x)
+# caneta.left(90)
+# caneta.forward(y)
+# caneta.left(90)
+# caneta.forward(x)
+# caneta.left(90)
+# caneta.forward(y)
+# caneta.left(90)
+#
+# caneta2 = turtle.Turtle()
+# caneta2.pencolor('red')
+# caneta2.left(90)
+# caneta2.forward(50)
+#
+#
+# time.sleep(3)
+# turtle.bye()
 
 
 # import turtle
-#
-#
-# def draw_rectangle(width, height):
-#     turtle.forward(width)
+# import time
+
+
+# def draw_rectangle():
+#     turtle.forward(100)
 #     turtle.left(90)
-#     turtle.forward(height)
+#     turtle.forward(50)
 #     turtle.left(90)
-#     turtle.forward(width)
+#     turtle.forward(100)
 #     turtle.left(90)
-#     turtle.forward(height)
+#     turtle.forward(50)
 #
 #
-# # Example usage:
-# draw_rectangle(100, 50)
-# turtle.done()
+#     time.sleep(3)
+#     turtle.bye()
+#
+#
+#
+#
+# draw_rectangle()
+
+
 
 

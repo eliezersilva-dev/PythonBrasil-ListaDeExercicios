@@ -10,17 +10,12 @@ criar os objetos que serão exibidos em um interface gráfica simples (turtle).
 import turtle
 import time
 
-
-# Parei aqui: a função 'apresentar_retangulo' não renderiza a janela turtle
-# a função é chamada, printa antes e depois da sequência de comandos turtle
-# mas o turtle não renderiza. Fora da função o bloco turtle funciona. Por que?
-# Por que? Por que? Por que? Por que? Por que? Por que? Por que? Por que? Por que?
-# Perdi umas duas horas tentando resolver essa porcaria. Desisto. Vou dormir...
+# Construindo a interface gráfica usando turtle
+turtle.Screen()
 
 
-# Esta função irá apresentar ao usuário o resultado em uma interface gráfica simples.
-def apresentar_retangulo():
-    print('OK chamou a função')
+# Esta função irá apresentar ao usuário o Retângulo na interface gráfica.
+def apresentar_retangulo(_retangulo):
     caneta = turtle.Turtle()
     caneta.speed(1)
     caneta.shape('circle')
@@ -29,36 +24,101 @@ def apresentar_retangulo():
     caneta.penup()
     caneta.goto(-250, -250)
 
-    x = 100
-    y = 50
-
     caneta.pendown()
-    caneta.forward(x)
+    caneta.forward(retangulo.largura)
     caneta.left(90)
-    caneta.forward(y)
+    caneta.forward(retangulo.altura)
     caneta.left(90)
-    caneta.forward(x)
+    caneta.forward(retangulo.largura)
     caneta.left(90)
-    caneta.forward(y)
+    caneta.forward(retangulo.altura)
     caneta.left(90)
-
-    caneta2 = turtle.Turtle()
-    caneta2.pencolor('red')
-    caneta2.left(90)
-    caneta2.forward(50)
 
     time.sleep(3)
-    turtle.bye()
-
-    print('\nAQUI -> Apresentação GRAFICA de "mostrar_retangulo"')
+    turtle.clearscreen()
 
     menu()
 
 
-# elif _funcao == 'encontrar_centro':
-#     print('\nAQUI -> Apresentação GRAFICA de mostrar_centro')
-# elif _funcao == 'encontrar_posicao':
-#     print('\nAQUI -> Apresentação GRAFICA de mostrar_ponto')
+# Esta função irá apresentar ao usuário o centro do Retângulo na interface gráfica.
+def apresentar_centro(_retangulo):
+    caneta = turtle.Turtle()
+    caneta.speed(1)
+    caneta.shape('circle')
+    caneta.hideturtle()
+    caneta.pensize(5)
+    caneta.penup()
+    caneta.goto(-250, -250)
+
+    caneta.pendown()
+    caneta.forward(retangulo.largura)
+    caneta.left(90)
+    caneta.forward(retangulo.altura)
+    caneta.left(90)
+    caneta.forward(retangulo.largura)
+    caneta.left(90)
+    caneta.forward(retangulo.altura)
+    caneta.left(90)
+
+    caneta.penup()
+    caneta.forward(retangulo.largura / 2)
+    caneta.left(90)
+    caneta.forward(retangulo.altura / 2)
+    caneta.dot(10, "red")
+
+    time.sleep(3)
+    turtle.clearscreen()
+
+    menu()
+
+
+# Esta função irá apresentar ao usuário as Posições dos Pontos x e y na interface gráfica.
+def apresentar_posicao(_retangulo, _ponto):
+    caneta = turtle.Turtle()
+    caneta.speed(1)
+    caneta.shape('circle')
+    caneta.hideturtle()
+    caneta.pensize(5)
+    caneta.penup()
+    caneta.goto(-250, -250)
+
+    caneta.pendown()
+    caneta.forward(retangulo.largura)
+    caneta.left(90)
+    caneta.forward(retangulo.altura)
+    caneta.left(90)
+    caneta.forward(retangulo.largura)
+    caneta.left(90)
+    caneta.forward(retangulo.altura)
+    caneta.left(90)
+
+    caneta.penup()
+    caneta.forward(ponto.ponto_x)
+    caneta.dot(8, "red")
+    caneta.pendown()
+    caneta.pensize(2)
+    caneta.color("red")
+    caneta.left(90)
+    caneta.forward(ponto.ponto_y)
+
+    caneta2 = turtle.Turtle()
+    caneta2.hideturtle()
+    caneta2.penup()
+    caneta2.goto(-250, -250)
+    caneta2.left(90)
+    caneta2.forward(ponto.ponto_y)
+    caneta2.dot(8, "red")
+    caneta2.pendown()
+    caneta2.pensize(2)
+    caneta2.color("red")
+    caneta2.right(90)
+    caneta2.forward(ponto.ponto_x)
+    caneta2.dot(8, "red")
+
+    time.sleep(3)
+    turtle.clearscreen()
+
+    menu()
 
 
 # Criando a Classe Retângulo
@@ -71,7 +131,8 @@ class Retangulo:
         print(f'\nMostrar Retângulo:\n'
               f'Largura: {self.largura}\n'
               f'Altura: {self.altura}')
-        apresentar_retangulo()  # Aqui chama a função de apresentação da interface gráfica
+
+        apresentar_retangulo(retangulo)  # Aqui chama a função de apresentação da interface gráfica
 
 
 # Criando a Classe Ponto
@@ -93,9 +154,9 @@ def encontrar_centro(_retangulo):
     altura = retangulo.altura
     x = f'{largura / 2 :.2f}'
     y = f'{altura / 2 :.2f}'
-    apresentacao('encontrar_centro')  # Aqui chama a função de apresentação da interface gráfica
     print(f'\nPosição centro do Retângulo: x{x}, y{y}')
-    menu()
+
+    apresentar_centro(retangulo)  # Aqui chama a função de apresentação da interface gráfica
 
 
 # Função para encontrar as posições dos pontos no retângulo
@@ -104,13 +165,13 @@ def encontrar_posicao(_retangulo, _ponto):
     altura = retangulo.altura
     x = ponto.ponto_x
     y = ponto.ponto_y
-    apresentacao('encontrar_posicao')  # Aqui chama a função de apresentação da interface gráfica
     print(f'\nPosições dos Pontos no Retângulo:\n'
           f'Retângulo\n'
           f'Largura: {largura}, Altura: {altura}\n'
           f'Ponto\n'
           f'Posição ponto: x{x:.2f}, y{y:.2f}')
-    menu()
+
+    apresentar_posicao(retangulo, ponto) # Aqui chama a função de apresentação da interface gráfica
 
 
 # A opção aqui se deu por criar um único objeto de cada classe. Eles serão armazenados em variáveis Globais
