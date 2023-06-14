@@ -67,11 +67,12 @@ class Bichinho:
             self.idade = 'Adulto'
         elif self.valor_idade <= 75:
             self.idade = 'Idoso'
-        elif self.valor_idade <= 150:
+        elif self.valor_idade <= 120:
             print(f'{self.nome} está velhinho...\n')
         else:
             time.sleep(1.2)
-            print(f'{self.nome} faleceu...\n'
+            print(f'Chegou a hora de {self.nome} descansar...\n'
+                  f'Adeus meu amiguinho!!'
                   f':´(')
             quit()
         return print(f'{self.nome} é um {self.idade}')
